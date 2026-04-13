@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — TuinMakers Voorbeeld | Tuintips & Inspiratie</title>
+  <meta name="description" content="Lees de nieuwste tuintips, seizoensadvies en inspiratie van de hoveniers van TuinMakers Voorbeeld in Rotterdam.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Page Transition -->
+<div class="page-transition" id="pageTransition"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header scrolled" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <i data-lucide="leaf" style="width:22px;height:22px"></i>
+      </div>
+      TuinMakers
+    </a>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#diensten">Diensten</a></li>
+        <li><a href="index.html#over-ons">Over Ons</a></li>
+        <li><a href="index.html#projecten">Projecten</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="blog.html" style="color:#6b8f5e">Blog</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn btn-primary">Gratis Tuinadvies</a>
+    </div>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== BLOG HERO ===================== -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="section-label" style="justify-content:center">Onze Blog</div>
+    <h1 class="reveal">Tuintips & <span class="text-sage">Inspiratie</span></h1>
+    <p class="reveal">Praktische adviezen, seizoenstips en de nieuwste trends in tuindesign. Geschreven door onze ervaren hoveniers.</p>
+  </div>
+</section>
+
+<!-- ===================== BLOG LISTING ===================== -->
+<section style="padding:60px 0 120px">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- Featured Article -->
+      <article class="blog-card featured stagger-child">
+        <div class="blog-card-img">
+          <img src="images/hero.jpg" alt="Voorjaarstuin met bloeiende borders" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Seizoenstips</span>
+            <span>8 april 2026</span>
+            <span>6 min leestijd</span>
+          </div>
+          <h3>De Ultieme Voorjaarschecklist voor Uw Tuin</h3>
+          <p>Het voorjaar is de perfecte tijd om uw tuin klaar te maken voor het nieuwe groeiseizoen. Van snoeien en bemesten tot nieuwe aanplant: ontdek onze complete checklist voor een vliegende start.</p>
+          <a href="#" class="blog-card-link">
+            Lees verder
+            <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="blog-card stagger-child">
+        <div class="blog-card-img">
+          <img src="images/project1.jpg" alt="Kleine stadstuin ontwerp" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Tuinontwerp</span>
+            <span>2 april 2026</span>
+          </div>
+          <h3>Kleine Tuin, Groot Effect: 8 Slimme Ontwerptips</h3>
+          <p>Met de juiste technieken kan zelfs de kleinste stadstuin een ruime en groene oase worden. Ontdek hoe spiegels, niveauverschillen en de juiste beplanting wonderen doen.</p>
+          <a href="#" class="blog-card-link">
+            Lees verder
+            <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="blog-card stagger-child">
+        <div class="blog-card-img">
+          <img src="images/craft.jpg" alt="Terras aanleg natuursteen" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Terrassen</span>
+            <span>27 maart 2026</span>
+          </div>
+          <h3>Natuursteen vs. Keramiek: Welke Bestrating Past Bij U?</h3>
+          <p>De keuze voor terrasbestrating bepaalt de uitstraling van uw hele tuin. Wij vergelijken de voor- en nadelen van de populairste materialen, van bluestone tot keramische tegels.</p>
+          <a href="#" class="blog-card-link">
+            Lees verder
+            <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 4 -->
+      <article class="blog-card stagger-child">
+        <div class="blog-card-img">
+          <img src="images/detail.jpg" alt="Duurzaam tuinieren" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Duurzaamheid</span>
+            <span>19 maart 2026</span>
+          </div>
+          <h3>Duurzaam Tuinieren: 5 Stappen Naar een Klimaatbestendige Tuin</h3>
+          <p>Wateroverlast, hitte en droogte: uw tuin kan het verschil maken. Leer hoe u met slimme beplanting, waterberging en groene daken bijdraagt aan een beter klimaat.</p>
+          <a href="#" class="blog-card-link">
+            Lees verder
+            <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWSLETTER CTA ===================== -->
+<section class="cta-section" style="padding:80px 0">
+  <div class="cta-bg">
+    <img src="images/team.jpg" alt="TuinMakers team" loading="lazy">
+    <div class="cta-bg-overlay"></div>
+  </div>
+  <div class="container cta-content reveal">
+    <h2>Ontvang Tuintips in Uw Inbox</h2>
+    <p>Schrijf u in voor onze maandelijkse nieuwsbrief en ontvang seizoensgebonden tips, inspiratie en exclusieve aanbiedingen.</p>
+    <div class="cta-buttons">
+      <a href="index.html#contact" class="btn btn-white">
+        <i data-lucide="mail" style="width:18px;height:18px"></i>
+        Schrijf Me In
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <i data-lucide="leaf" style="width:22px;height:22px"></i>
+          </div>
+          TuinMakers
+        </a>
+        <p>Vakkundige hoveniers in Rotterdam en omgeving. Al meer dan 18 jaar uw partner voor tuinontwerp, aanleg en onderhoud.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Diensten</h4>
+        <ul>
+          <li><a href="index.html#diensten">Tuinontwerp</a></li>
+          <li><a href="index.html#diensten">Tuinaanleg</a></li>
+          <li><a href="index.html#diensten">Tuinonderhoud</a></li>
+          <li><a href="index.html#diensten">Vijvers</a></li>
+          <li><a href="index.html#diensten">Terrassen</a></li>
+          <li><a href="index.html#diensten">Boomverzorging</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="index.html#over-ons">Over Ons</a></li>
+          <li><a href="index.html#projecten">Projecten</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+31101234567">010 - 123 4567</a></li>
+          <li><a href="mailto:info@tuinmakers.nl">info@tuinmakers.nl</a></li>
+          <li><a href="#">Tuinstraat 42</a></li>
+          <li><a href="#">3011 AB Rotterdam</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 TuinMakers Voorbeeld. Alle rechten voorbehouden.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i data-lucide="facebook" style="width:18px;height:18px"></i></a>
+        <a href="#" aria-label="Instagram"><i data-lucide="instagram" style="width:18px;height:18px"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== STUDIOLEE BADGE ===================== -->
+<a href="https://studiolee.nl" target="_blank" rel="noopener" class="studiolee-badge">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#6b8f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+  </svg>
+  Website door <span>StudioLee</span> &mdash; hoveniers
+</a>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+(function(){
+  'use strict';
+
+  /* ---------- Lucide Icons ---------- */
+  lucide.createIcons();
+
+  /* ---------- GSAP Setup ---------- */
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---------- Scroll Progress ---------- */
+  gsap.to('#scrollProgress', {
+    scaleX: 1,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: 'body',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 0.3
+    }
+  });
+
+  /* ---------- Header scroll ---------- */
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  });
+
+  /* ---------- Mobile menu ---------- */
+  const toggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+
+  /* ---------- Cursor Glow ---------- */
+  const glow = document.getElementById('cursorGlow');
+  if (window.matchMedia('(pointer:fine)').matches) {
+    document.addEventListener('mousemove', (e) => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+  } else {
+    glow.style.display = 'none';
+  }
+
+  /* ---------- Reveal animations ---------- */
+  gsap.utils.toArray('.reveal').forEach(el => {
+    gsap.to(el, {
+      y: 0, opacity: 1, duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 85%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+
+  /* ---------- Blog cards stagger ---------- */
+  gsap.to('.blog-grid .stagger-child', {
+    y: 0, opacity: 1, duration: 0.8,
+    stagger: 0.15,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.blog-grid',
+      start: 'top 80%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  /* ---------- Blog card hover image zoom parallax ---------- */
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 4;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * -4;
+      card.style.transform = `translateY(-6px) perspective(1000px) rotateX(${y}deg) rotateY(${x}deg)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+
+  /* ---------- CTA parallax ---------- */
+  gsap.to('.cta-bg img', {
+    yPercent: 15,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.cta-section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: 1
+    }
+  });
+
+  /* ---------- Footer reveal ---------- */
+  gsap.from('.footer-grid > *', {
+    y: 40, opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.site-footer',
+      start: 'top 85%',
+      toggleActions: 'play none none none'
+    }
+  });
+
+  /* ---------- Badge entrance ---------- */
+  gsap.from('.studiolee-badge', {
+    y: 60, opacity: 0,
+    duration: 1,
+    delay: 0.8,
+    ease: 'back.out(1.4)'
+  });
+
+  /* ---------- Page entrance animation ---------- */
+  const trans = document.getElementById('pageTransition');
+  trans.style.transformOrigin = 'top';
+  trans.style.transform = 'scaleY(1)';
+  gsap.to(trans, {
+    scaleY: 0,
+    duration: 0.6,
+    delay: 0.1,
+    ease: 'power3.inOut'
+  });
+
+  /* ---------- Transition to index ---------- */
+  document.querySelectorAll('a[href="index.html"], a[href^="index.html#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Only intercept non-anchor links for transition
+      if (this.getAttribute('href') === 'index.html') {
+        e.preventDefault();
+        const dest = this.href;
+        gsap.set(trans, { transformOrigin: 'bottom' });
+        gsap.to(trans, {
+          scaleY: 1,
+          duration: 0.5,
+          ease: 'power3.inOut',
+          onComplete: () => { window.location.href = dest; }
+        });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
